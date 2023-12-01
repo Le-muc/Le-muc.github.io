@@ -1,0 +1,204 @@
+/* Estilos generales */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: monospace;
+}
+
+/* Estilos para la página 1 */
+.pagina1 {
+  background-image: url('imagenes/img-f.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 60px;
+  position: relative;
+  z-index: 10;
+}
+
+.menu li {
+  margin: 0 37px;
+  text-align: center;
+}
+
+.menu li a {
+  color: antiquewhite;
+  font-size: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  display: block;
+  width: 100%;
+}
+
+.menu li a:hover {
+  color: rgb(82, 80, 80);
+}
+
+.pagina1 .logo-container {
+  text-align: center;
+}
+
+.pagina1 img {
+  max-width: 98%;
+  height: auto;
+  position: relative;
+  z-index: 0;
+  transform: rotate(2.2deg);
+}
+
+/* Estilos para el menú toggle */
+.menu-toggle {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: #333;
+  cursor: pointer;
+  z-index: 1000;
+  border-radius: 5px;
+}
+
+/* Estilo de las líneas del icono del menú */
+.menu-toggle::before,
+.menu-toggle::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px; /* Ancho de las líneas */
+  height: 3px; /* Grosor de las líneas */
+  background-color: #fff; /* Color de las líneas */
+  border-radius: 2px;
+}
+
+.menu-toggle::before {
+  transform: translate(-50%, -50%) translateY(-8px); /* Alineación vertical para la primera línea */
+}
+
+.menu-toggle::after {
+  transform: translate(-50%, -50%) translateY(8px); /* Alineación vertical para la tercera línea */
+}
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
+
+.menu {
+  list-style: none;
+  padding: 20px;
+  margin: 0;
+  color: white;
+}
+
+/* Estilos para la página 2 */
+.pagina2 {
+  margin-top: 0vh;
+  background-image: url('imagenes/img-f.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  height: calc(100vh - 40px);
+  overflow-y: auto;
+  padding-left: 11px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.pagina2 section {
+  margin-bottom: 1000px;
+  margin-left: 165px;
+}
+
+.pagina2 h2 {
+  color: antiquewhite;
+  font-size: 30px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(56, 56, 56);
+  border-radius: 10px;
+}
+
+/* Estilos para el footer */
+/* footer {
+  background-color: black;
+  color: white;
+  text-align: right;
+  padding: 1px 0;
+} */
+
+.link-volver {
+  color: blanchedalmond;
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 20px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* .link-volver:hover {
+  color: rgb(82, 80, 80);
+} */
+
+/* Ocultar barra de desplazamiento en navegadores webkit */
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Estilos para el menú desplegable */
+.menu-container.show-menu {
+  left: 0;
+}
+
+.blur {
+  filter: blur(5px); /* Efecto de desenfoque para el contenido detrás del menú */
+}
+
+
+
+
+
+
+
+
